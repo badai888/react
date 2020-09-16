@@ -1,5 +1,6 @@
 import React,{Component} from 'react'
 import Con from './Todoconent'
+import Todoheader from './Todoheader'
 export default class Todolist extends Component {
   constructor(){
     super();
@@ -12,6 +13,7 @@ export default class Todolist extends Component {
   render(){
     return(
       <div>
+        <Todoheader/>
         <Con/>
         {/* <button onClick={()=>{this.setState({num:2})}} >111</button> */}
         {/* <button onClick={this.hand.bind(this)}>3</button> */}

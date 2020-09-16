@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+import './sty.css'
 export default class extends Component{
   constructor(){
   super();
