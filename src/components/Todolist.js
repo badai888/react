@@ -1,14 +1,14 @@
 import React,{Component} from 'react'
 import Todoconent from './Todoconent'
 import Todoheader from './Todoheader'
-import './cd.css'
+import './cg.css'
 export default class Todolist extends Component {
-  // static getDerivedStateFromProps(props,state){
-  //   let ul= props.arr.inputs
-  //   return {
-  //           ul
-  //   }
-  // }
+  static getDerivedStateFromProps(props,state){
+    let ul= props.arr.inputs
+    return {
+            ul
+    }
+  }
   constructor(){
     super();
     this.state={
