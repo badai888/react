@@ -5,23 +5,7 @@ export default class extends Component{
   this.state ={
     num:1,
     ishow:true,
-    arr:[
-      {
-        name:'小明',
-        age:12,
-        gender:'女'
-      },
-      {
-        name:'小7',
-        age:18,
-        gender:'女'
-      },
-      {
-        name:'小9',
-        age:16,
-        gender:'男'
-      }
-    ],
+    
     richText:`
     <div>
       我是富文本
