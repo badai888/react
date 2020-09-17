@@ -1,73 +1,26 @@
-import React,{Component} from 'react'
-import Todoconent from './Todoconent'
-import Todoheader from './Todoheader'
-import './cg.css'
+import React,{Component,createRef} from 'react'
+
 export default class Todolist extends Component {
-  static getDerivedStateFromProps(props,state){
-    let ul= props.arr.inputs
-    return {
-            ul
-    }
-  }
+
   constructor(){
     super();
+    this.btn=createRef()
     this.state={
-      inputs:"",
-     arr:[]
-     
     }
 
   }
   render(){
-    console.log("渲染")
     return(
-      <div>
-        <Todoheader 
-        title="留言板"
-        inputs={this.state.inputs}
-        change={this.add}
-        hand={this.hand}
-        />
-        <Todoconent
-        del={this.del}
-        arr={this.state.arr}
-        />
-      </div>
+      <>
+    <button ref={this.btn}>按钮</button>
+     <button ref={(btn2)=>this.ol=btn2}>按钮2</button>
+      </>
     )
   }
-  // componentDidMount
-  // componentDidUpdate
-  // componentWillUnmount
-  
-  hand=(value)=>{
-    //填充
-    this.setState({
-      inputs:value
-  
-    })
-   
+  componentDidMount(){
+    console.log(this.btn.current)
+    console.log(this.ol)
   }
-add=()=>{
-  //增加
-  let todo={
-    inputs:this.state.inputs,
-    isclick:false,
-    
-  }
-  let arr =this.state.arr
-  arr.unshift(todo)
-  console.log(arr)
-  this.setState({
-    arr,
-    inputs:""//清空input
-  })
-  }
-  del=(index)=>{
-      let arr=this.state.arr
-      arr.splice(index,1)
-      this.setState({
-        arr
-      })
-  }
+
 }
 
