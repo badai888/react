@@ -1,5 +1,6 @@
 import React,{Component,createRef} from 'react'
-
+import Todoconent from './Todoconent'
+import Todoheader from './Todoheader'
 export default class Todolist extends Component {
 
   constructor(){
@@ -12,15 +13,10 @@ export default class Todolist extends Component {
   render(){
     return(
       <>
-    <button ref={this.btn}>按钮</button>
-     <button ref={(btn2)=>this.ol=btn2}>按钮2</button>
+      <Todoconent/>
+      <Todoheader/>
       </>
     )
   }
-  componentDidMount(){
-    console.log(this.btn.current)
-    console.log(this.ol)
-  }
-
 }
 
