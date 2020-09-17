@@ -8,3 +8,14 @@
   height: 200px;
   border: 1px solid red;
 }
+.succ{
+background: pink;
+}
+.shib{
+  background: orange;
+}
+.bigbox{
+  width: 80px;
+
+  border: 1px solid red;
+}

@@ -3,60 +3,26 @@ export default class extends Component{
   constructor(){
   super();
   this.state ={
-    num:1,
-    ishow:true,
-
+    
   }
 }
 render(){
   return(
     <div>
-      <button onClick={(e)=>{this.hand(e,1)}}>
-        11
-      </button>
-      {
-        this.state.ishow
-        ?
-        <div>真的</div>
-        :
-        <div>假的</div>
-      }
-      <button onClick={
-         ()=>{this.setState({ishow: !this.state.ishow})}
-         }> 按钮</button>
-        {/* {
-          this.state.arr.map((el,index)=>{
-            return (
-              <li key={index}>
-                <h1>{el.name}</h1>
-                <h2>{el.age}</h2>
-                <h3>{el.gender}</h3>
-              </li>
-            )
-          })
+        {this.props.arr.map((el,index)=>{
+          return(
+            <p className="bigbox" key={index}>{el.inputs}
+            <span className={el.isclick?"succ":'shib'}>{el.isclick?'已完成':"未完成"}</span>
+            <button onClick={()=>{this.del(index)}}>删除</button>
+            </p>
+          )
+        })
         }
-        {
-          this.state.richText
-        }
-        <div dangerouslySetInnerHTML={{__html:this.state.richText}}></div>
-      {this.state.num}
-      { 
-      this.state.arr.map((el,index)=>{
-        return (
-          <li key={index}>
-            {el.name}
-          </li>
-        )
-      })
      
-      } */}
-
     </div>
   )
 }
-// hand=(e,num)=>{
-//   console.log(e.target) 
-//   e.target.style.background="red"
-//   alert(num)
-// }
+del=(index)=>{
+  this.props.del(index)
+}
 }

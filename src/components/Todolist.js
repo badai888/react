@@ -1,61 +1,61 @@
 import React,{Component} from 'react'
-import Con from './Todoconent'
+import Todoconent from './Todoconent'
+import Todoheader from './Todoheader'
 import './cd.css'
 export default class Todolist extends Component {
   constructor(){
     super();
     this.state={
-      isLike:true,
-      num:0,
-      arr:[
-        {
-          name:'1',
-          title:'一'
-        },
-        {
-          name:'2',
-          title:'二'
-        },
-        {
-          name:'3',
-          title:'三'
-        }
-      ]
+      inputs:"",
+     arr:[]
+     
     }
 
   }
   render(){
     return(
       <div>
-        <Con/>
-        {this.state.arr.map((el,index)=>{
-          return (
-          <button
-          className={index===this.state.num?"box":""}
-          onClick={()=>{this.qie(index)}}
-          key={index}>{el.name}</button>
-          )
-        })}
-        {
-          this.state.arr.map((el,index)=>{
-            return (         
-              index===this.state.num
-                  ?
-              <div className="boy">{el.title}</div>
-              :
-              ""
-              
-            )
-          })
-        }
-
+        <Todoheader 
+        title="留言板"
+        inputs={this.state.inputs}
+        change={this.add}
+        hand={this.hand}
+        />
+        <Todoconent
+        del={this.del}
+        arr={this.state.arr}
+        />
       </div>
     )
   }
-  qie=(num) => {
+  hand=(value)=>{
+    //填充
     this.setState({
-      num
+      inputs:value
+  
     })
+   
   }
-
+add=()=>{
+  //增加
+  let todo={
+    inputs:this.state.inputs,
+    isclick:false
+  }
+  let arr =this.state.arr
+  arr.unshift(todo)
+  console.log(arr)
+  this.setState({
+    arr,
+    inputs:""//清空input
+  })
+  }
+  del=(index)=>{
+      let arr=this.state.arr
+      arr.splice(index,1)
+      this.setState({
+        arr
+      })
+  }
 }
+
