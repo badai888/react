@@ -50,12 +50,12 @@ add=()=>{
     inputs:""//清空input
   })
   }
-  del=(index)=>{
-      let arr=this.state.arr
-      arr.splice(index,1)
-      this.setState({
-        arr
-      })
-  }
+  // del=(index)=>{
+  //     let arr=this.state.arr
+  //     arr.splice(index,1)
+  //     this.setState({
+  //       arr
+  //     })
+  // }
 }
 
