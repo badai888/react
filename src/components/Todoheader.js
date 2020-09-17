@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 export default class Todoheader extends Component {
   render() {
+  
     return (
       <div>
         
@@ -19,6 +20,7 @@ export default class Todoheader extends Component {
     console.log(tar.value)
   }
   change=()=>{
+
     this.props.change()
   }
 }

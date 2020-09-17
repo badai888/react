@@ -3,6 +3,12 @@ import Todoconent from './Todoconent'
 import Todoheader from './Todoheader'
 import './cd.css'
 export default class Todolist extends Component {
+  // static getDerivedStateFromProps(props,state){
+  //   let ul= props.arr.inputs
+  //   return {
+  //           ul
+  //   }
+  // }
   constructor(){
     super();
     this.state={
@@ -13,6 +19,7 @@ export default class Todolist extends Component {
 
   }
   render(){
+    console.log("渲染")
     return(
       <div>
         <Todoheader 
@@ -28,6 +35,10 @@ export default class Todolist extends Component {
       </div>
     )
   }
+  // componentDidMount
+  // componentDidUpdate
+  // componentWillUnmount
+  
   hand=(value)=>{
     //填充
     this.setState({
@@ -40,7 +51,8 @@ add=()=>{
   //增加
   let todo={
     inputs:this.state.inputs,
-    isclick:false
+    isclick:false,
+    
   }
   let arr =this.state.arr
   arr.unshift(todo)
@@ -50,12 +62,12 @@ add=()=>{
     inputs:""//清空input
   })
   }
-  // del=(index)=>{
-  //     let arr=this.state.arr
-  //     arr.splice(index,1)
-  //     this.setState({
-  //       arr
-  //     })
-  // }
+  del=(index)=>{
+      let arr=this.state.arr
+      arr.splice(index,1)
+      this.setState({
+        arr
+      })
+  }
 }
 

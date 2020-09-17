@@ -3,10 +3,19 @@ export default class extends Component{
   constructor(){
   super();
   this.state ={
+  }
+}
+static getDerivedStateFromProps(props,state){
+  let todo =props.arr.filter(el=>el.inputs)
+  return {
+    todo
     
   }
 }
 render(){
+
+  console.log("渲染提交")
+  
   return(
     <div>
         {this.props.arr.map((el,index)=>{
@@ -22,6 +31,13 @@ render(){
     </div>
   )
 }
+shouldComponentUpdate(nextProps,nextState){
+  console.log(nextProps)
+  console.log(nextState)
+  console.log(this.state.inputs)
+  return nextProps.arr.inputs !== this.state.inputs
+}
+
 del=(index)=>{
   this.props.del(index)
 }
