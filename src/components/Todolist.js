@@ -1,35 +1,61 @@
 import React,{Component} from 'react'
 import Con from './Todoconent'
+import './cd.css'
 export default class Todolist extends Component {
   constructor(){
     super();
     this.state={
       isLike:true,
-      num:1
+      num:0,
+      arr:[
+        {
+          name:'1',
+          title:'一'
+        },
+        {
+          name:'2',
+          title:'二'
+        },
+        {
+          name:'3',
+          title:'三'
+        }
+      ]
     }
-    // this.hed =this.hed.bind(this)
+
   }
   render(){
     return(
       <div>
         <Con/>
-        {/* <button onClick={()=>{this.setState({num:2})}} >111</button> */}
-        {/* <button onClick={this.hand.bind(this)}>3</button> */}
-        {/* <button onClick={this.hed}>4</button> */}
-        <button onClick={this.hed}>5</button>
-        <button onClick={this.ohj.bind(this)}>6</button>
-        {this.state.num}
+        {this.state.arr.map((el,index)=>{
+          return (
+          <button
+          className={index===this.state.num?"box":""}
+          onClick={()=>{this.qie(index)}}
+          key={index}>{el.name}</button>
+          )
+        })}
+        {
+          this.state.arr.map((el,index)=>{
+            return (         
+              index===this.state.num
+                  ?
+              <div className="boy">{el.title}</div>
+              :
+              ""
+              
+            )
+          })
+        }
+
       </div>
     )
   }
-  ohj(){
+  qie=(num) => {
     this.setState({
-      num:6
+      num
     })
   }
-  hed=()=>{
-    this.setState({
-      num:5
-    })
-  }
+
 }

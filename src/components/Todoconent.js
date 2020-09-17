@@ -5,14 +5,7 @@ export default class extends Component{
   this.state ={
     num:1,
     ishow:true,
-    
-    richText:`
-    <div>
-      我是富文本
-      <h3>标题</h3>
-      <button>按钮</button>
-    </div>
-  `
+
   }
 }
 render(){
@@ -31,7 +24,7 @@ render(){
       <button onClick={
          ()=>{this.setState({ishow: !this.state.ishow})}
          }> 按钮</button>
-        {
+        {/* {
           this.state.arr.map((el,index)=>{
             return (
               <li key={index}>
@@ -56,7 +49,7 @@ render(){
         )
       })
      
-      }
+      } */}
 
     </div>
   )
