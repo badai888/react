@@ -6,7 +6,6 @@ class App extends Component {
     return (
       <Fragment>
         <Todolist/>
-      
       </Fragment>
     )
   }
