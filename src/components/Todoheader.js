@@ -1,24 +1,22 @@
 import React, { Component } from 'react'
-import {Conconsumer} from './context'
+import {ContextConsumer} from './context'
 export default class Todoheader extends Component {
   render() {
-  
     return (
       <div>
-       <Conconsumer>
-         {
-           (obj)=>{
-             return(
-               <div>
-                 {obj.a}
-               </div>
-             )
-           }
-         }
-       </Conconsumer>
-    
+   <ContextConsumer>
+     {
+       (obj)=>{
+         return (
+           <div>
+             {obj.a}
+          <button onClick={()=>{obj.act(5)}}>切换</button>
+           </div>
+         )
+       }
+     }
+   </ContextConsumer>
       </div>
     )
   }
-
 }

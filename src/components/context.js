@@ -1,33 +1,32 @@
-
-import  React,{createContext,Component} from 'react'
-const context = createContext()
-class Contexta extends Component{
+import React, { Component,createContext } from 'react'
+const contetx = createContext()
+ class Context extends Component {
   constructor(){
-    super();
+    super()
     this.state={
-      a:15,
-      b:20
+      a:1,
+      b:2
+
     }
   }
-  render(){
+  render() {
     return (
       <div>
-        <context.Provider value={{...this.state,tit:this.tit}}>
-              {this.props.children}
-        </context.Provider>
-
+        <contetx.Provider value={{...this.state,act:this.add}}>
+        {this.props.children}
+        </contetx.Provider> 
       </div>
     )
   }
-  tit =(num)=>{
-    this.setState({
-      a:num
-    })
+  add=(num)=>{
+   this.setState({
+     a:num
+   })
   }
 }
-let Conprovider =Contexta
-let Conconsumer =context.Consumer
+let ContextProvider =Context;
+let ContextConsumer = contetx.Consumer
 export {
-  Conprovider,
-  Conconsumer
+  ContextProvider,
+  ContextConsumer
 }
