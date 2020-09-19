@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import store from "./store.js"
+import { addnum,delnum} from './store/acton'
 console.log(store.getState())
 export default class A extends Component {
   constructor(){
@@ -21,15 +22,9 @@ export default class A extends Component {
     )
   }
   add=()=>{
-    store.dispatch({
-      type:"addnum",
-      value:3
-    })
+    store.dispatch(addnum(3))
   }
   del=()=>{
-    store.dispatch({
-      type:'delnum',
-      value:3
-    })
+    store.dispatch(delnum(3))
   }
 }
