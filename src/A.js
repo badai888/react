@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import store from "./store.js"
+import store from "./store"
 import { addnum,delnum} from './store/acton'
 console.log(store.getState())
 export default class A extends Component {
