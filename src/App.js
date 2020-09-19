@@ -1,11 +1,11 @@
 import React,{Component,Fragment} from 'react'
-import Todolist from './components/Todolist'
-
+// import Todolist from './components/Todolist'
+import A from './A'
 class App extends Component {
   render(){
     return (
       <Fragment>
-        <Todolist/>
+        <A/>
       </Fragment>
     )
   }
