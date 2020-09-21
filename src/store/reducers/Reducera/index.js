@@ -4,10 +4,11 @@ let defaultState = {
   arr:[]
 }
 const todoState = localStorage.getItem('todoState')?JSON.parse(localStorage.getItem('todoState')):{
-  input:'7',
+  input:'1',
   arr:[]
 }
 defaultState = todoState
+
 const reducer = (state=defaultState,action)=>{
   let newState =JSON.parse(JSON.stringify(state))
   console.log(state)
@@ -22,7 +23,7 @@ const reducer = (state=defaultState,action)=>{
       newState.input=""
       break;
     case Qie:
-    newState.arr[action.index].isshow=!newState.arr[action.index].isshow
+     newState.arr[action.index].isshow=!newState.arr[action.index].isshow
       break;
     case Del:
       newState.arr.splice(action.index,1);
@@ -35,4 +36,4 @@ const reducer = (state=defaultState,action)=>{
 
 }
 
-export default reducer
+export default  reducer

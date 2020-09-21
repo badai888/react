@@ -7,7 +7,7 @@ const change=(value)=>{
 }
  const add =(input)=>{
    alert(1)
-  return{
+  return {
     type:Add,
     value:{
       input,
@@ -17,13 +17,13 @@ const change=(value)=>{
   }
 }
 
-const addjs = (input)=>{
-  return (dispatch)=>{
-    setTimeout(()=>{
-      dispatch(add(input))
-    },2000)
-  }
-}
+// const addjs = (input)=>{
+//   return (dispatch)=>{
+//     setTimeout(()=>{
+//       dispatch(add(input))
+//     },2000)
+//   }
+// }
 const del=(index)=>{
   return {
     type:Del,
@@ -41,5 +41,5 @@ export {
   del,
   add,
   qie,
-  addjs
+  // addjs
 }

@@ -11,9 +11,9 @@ export default class Todolist extends Component {
     this.state={
       ...store.getState().todo
     }
-    console.log(store.getState().todo)
+    console.log(store.getState())
     store.subscribe(()=>{
-      this.setState(store.getState())
+      this.setState(store.getState().todo)
     })
   }
   render() {
@@ -32,6 +32,10 @@ export default class Todolist extends Component {
        />
       </div>
     )
+  }
+  shouldComponentUpdate(nextProps,nextState){
+    
+    return nextState.arr.input=!nextState.arr.input
   }
   change=(value)=>{
 
