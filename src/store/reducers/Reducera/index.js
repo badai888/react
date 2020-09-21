@@ -1,8 +1,13 @@
 import {Add,Del,Change,Qie} from './actionstype'
-const defaultState = {
+let defaultState = {
   input:'1',
   arr:[]
 }
+const todoState = localStorage.getItem('todoState')?JSON.parse(localStorage.getItem('todoState')):{
+  input:'7',
+  arr:[]
+}
+defaultState = todoState
 const reducer = (state=defaultState,action)=>{
   let newState =JSON.parse(JSON.stringify(state))
   console.log(state)
@@ -25,6 +30,7 @@ const reducer = (state=defaultState,action)=>{
       default :break;
   }
   console.log(newState)
+  localStorage.setItem('todoState',JSON.stringify(newState))
   return newState
 
 }

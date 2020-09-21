@@ -13,6 +13,7 @@ const change=(value)=>{
       input,
       isshow:false
     }
+    
   }
 }
 

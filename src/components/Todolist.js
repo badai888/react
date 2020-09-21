@@ -23,7 +23,7 @@ export default class Todolist extends Component {
       title="今日事，今日毕"
       input={this.state.input}
       change={this.change}
-      add={this.add}
+      add={this.addnum}
       />
        <Todoconent
        del={this.del}
@@ -38,13 +38,13 @@ export default class Todolist extends Component {
   store.dispatch(change(value))
  
   }
-  add=()=>{
+  addnum=()=>{
     //增加
     store.dispatch(add(this.state.input))
  
   }
   del=(index)=>{
-//删除
+  //删除
   store.dispatch(del(index))
   // this.props.del(index)
 
