@@ -6,7 +6,7 @@ const change=(value)=>{
   }
 }
  const add =(input)=>{
-   alert(1)
+
   return {
     type:Add,
     value:{
