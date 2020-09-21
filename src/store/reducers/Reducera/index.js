@@ -24,8 +24,8 @@ const reducer = (state=defaultState,action)=>{
       break;
       default :break;
   }
+  console.log(newState)
   return newState
-
 
 }
 

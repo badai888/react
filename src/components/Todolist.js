@@ -34,30 +34,14 @@ export default class Todolist extends Component {
     )
   }
   change=(value)=>{
-  // this.setState({
-  //   input:value
-  // })
 
   store.dispatch(change(value))
-  // this.props.change(value)
+ 
   }
   add=()=>{
     //增加
     store.dispatch(add(this.state.input))
-    // this.props.add(this.props.input)
-
-  //  let todos={
-  //     input:this.state.input,
-  //     isshow:true
-  //   }
-  //   // let arr=this.state.arr
-  //   this.state.arr.unshift(todos)
-  //   this.setState({
-  //     todos,
-  //     input:""
-  //   })
-    
-    // console.log(this.state)
+ 
   }
   del=(index)=>{
 //删除
