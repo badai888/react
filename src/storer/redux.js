@@ -25,4 +25,4 @@ const reducer = (state=defaultState,action)=>{
  
 
 }
-export default reducer
+// export default reducer
