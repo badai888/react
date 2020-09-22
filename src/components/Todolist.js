@@ -23,12 +23,13 @@ export default class Todolist extends Component {
             change={this.changey}
             input={this.state.input}
             add={this.add}
-            qie={this.qie}
+    
             />
           <Todoconent
             title="我是ace"
             arr={this.state.arr}
-            del={this.del}
+            del={this.del} 
+            qie={this.qie}
           />
       </>
     )

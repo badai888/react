@@ -1,9 +1,16 @@
-const defaultState = {
+let defaultState = {
   input:"5",
   arr:[]
 }
-const reducer = (state=defaultState,action)=>{
-  console.log(action)
+const todolis=localStorage.getItem("skys")?JSON.parse(localStorage.getItem("skys")):
+{  
+  input:"5",
+arr:[]
+}
+
+    defaultState = todolis
+  const reducer = (state=defaultState,action)=>{
+      console.log(action)
   let newState = JSON.parse(JSON.stringify(state)) //深克隆
   switch (action.type){
     case "change":
@@ -21,6 +28,7 @@ const reducer = (state=defaultState,action)=>{
         break;
       default: break;
   }
+  localStorage.setItem('skys',JSON.stringify(newState))
   return newState
  
 

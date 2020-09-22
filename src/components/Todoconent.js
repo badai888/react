@@ -12,7 +12,7 @@ export default class Todoconent extends Component {
             <div key={index}>
               {el.input}
               <button onClick={()=>{this.del(index)}}>删除</button>
-          <button onClick={()=>{this.qie(index)}}>{this.props.arr.isshoe?"完成":"未完成"}</button>
+          <button onClick={()=>{this.qie(index)}}>{el.isshoe?"完成":"未完成"}</button>
             </div>
           )
         })
