@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.2.2",
     "@babel/core": "7.9.0",
     "@svgr/webpack": "4.3.3",
     "@testing-library/jest-dom": "^4.2.4",
@@ -10,6 +11,7 @@
     "@testing-library/user-event": "^7.1.2",
     "@typescript-eslint/eslint-plugin": "^2.10.0",
     "@typescript-eslint/parser": "^2.10.0",
+    "antd": "^4.6.5",
     "axios": "^0.20.0",
     "babel-eslint": "10.1.0",
     "babel-jest": "^24.9.0",
@@ -136,5 +138,11 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@craco/craco": "^5.6.4",
+    "babel-plugin-import": "^1.13.0",
+    "craco-less": "^1.17.0"
   }
 }

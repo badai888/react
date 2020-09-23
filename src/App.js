@@ -3,9 +3,13 @@ import {Route,Switch,Redirect } from 'react-router-dom'
 import routes from './routes'
 import Fracb from './view/Frams'
 import Login from './view/Login'
+import {AppleOutlined} from '@ant-design/icons'
+import {Button } from 'antd'
 const App = ()=>{ 
   return (
     <div>
+      <Button>哈哈</Button>
+      <AppleOutlined />
       <>
    <Switch>
      <Route path="/login" component={Login}></Route>
