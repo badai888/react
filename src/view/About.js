@@ -15,7 +15,8 @@ export default class About extends Component {
         {/* <button onClick={()=>{}}></button> */}
       <button onClick={this.enter}>跳转</button>
 
-      <Link to={ {pathname:'/About/new',state:{id:2}} }>新闻</Link>
+      {/* <Link to={ {pathname:'/About/new',state:{id:2}} }>新闻</Link> */}
+      <Link to={{pathname:'/About/new',state:{id:6}}}>跳转2</Link>
         <Switch>
         <Route path="/About/new" component={New}></Route>
         <Route ></Route>
