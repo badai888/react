@@ -1,15 +1,21 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import {demo} from '../api/homeapi'
+import Our from './our'
 export default class Home extends Component {
   render() {
     return (
       <div>
         Home页
+        <Our/>
         <button onClick={this.enter}>请求数据</button>
         <button onClick={this.deou}>数据情求</button>
+        
       </div>
     )
+  }
+  componentDidMount(){
+    console.log(this.props)
   }
   enter=()=>{
     axios({

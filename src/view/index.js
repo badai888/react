@@ -5,8 +5,12 @@ export default class index extends Component {
     return (
       <div> 
         index页
-        
+
       </div>
     )
   }
+  componentDidMount(){
+    console.log(this.props)
+  }
+  
 }
